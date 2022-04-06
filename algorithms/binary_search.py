@@ -4,7 +4,7 @@ def binary_search(arr, val):
     end = len(arr) - 1
     while start <= end:
         steps += 1
-        mid = (end + start) / 2
+        mid = (end + start) // 2
         mid_val = arr[mid]
         if mid_val == val:
             return mid, steps
