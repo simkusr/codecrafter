@@ -10,7 +10,6 @@ from algorithms.binary_search import binary_search
         ]
 )
 def test_binary_search(arr, search_val, exp_val):
-    print(arr, search_val)
     result = binary_search(arr, search_val)
     assert result == exp_val
 
