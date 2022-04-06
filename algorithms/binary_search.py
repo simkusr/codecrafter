@@ -1,16 +1,18 @@
 def binary_search(arr, val):
+    steps = 1
     start = 0
     end = len(arr) - 1
     while start <= end:
-        mid = (start + end) / 2
+        steps += 1
+        mid = (end + start) / 2
         mid_val = arr[mid]
         if mid_val == val:
-            return mid
-        elif mid_val > val:
-            start = mid + 1
+            return mid, steps
         elif mid_val < val:
-            end = mid -1
-    return None
+            start = mid + 1
+        elif mid_val > val:
+            end = mid - 1
+    return None, steps
 
 
 if __name__ == '__main__':
